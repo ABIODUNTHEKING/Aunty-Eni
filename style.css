@@ -1,0 +1,105 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;  
+    font-family: 'Rubik', sans-serif;
+}
+
+body{ 
+    color:; 
+    margin: 0 5%;
+}
+/* HEADER 
+------------------------------------------ */
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.hero{
+    font-size: 30px;
+}
+
+.navbar li{
+    display: inline-block;
+    list-style: none;
+}
+
+.navbar li:not(:last-child){
+    margin-right: 20px;
+}
+
+.navlink{
+    text-decoration: none;
+    color: black;
+}
+
+.navlink:hover{
+   color: #8a2be2; 
+}
+
+.contact{
+    border: 1px solid #8a2be2;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.contact:hover{
+    box-shadow: 2px 2px #8a2be2;
+}
+
+/* INTRO
+--------------------------------- */
+.intro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh; 
+}
+
+
+.hero button{
+    border: 1px solid #8a2be2;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-weight: 400;
+    color: white;
+    background-color: #8a2be2;
+    margin-top: 10px;
+}
+
+.hero button:hover{
+    box-shadow: 2px 2px #8a2be2;
+}
+
+
+.intro img{
+    border-radius: 50%;
+    
+}
+
+.social-links a{
+    color: black;
+    font-size: x-large;
+    margin: 0 5px;
+  
+}
+
+.social-links a:hover{
+    color: #8a2be2;
+}
+/* SERVICES
+-------------------------------------------------- */
+/* RESPONSIVENESS
+--------------------------------------------------*/
+@media only screen and (max-width: 600px){
+    .hero{
+        font-size: 20px;
+    }
+    .intro img{
+        width: 70%;
+    }
+} 

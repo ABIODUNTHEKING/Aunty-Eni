@@ -19,10 +19,6 @@ header{
     gap: 20px;
 }
 
-.hero{
-    font-size: 30px;
-}
-
 .navbar li{
     display: inline-block;
     list-style: none;
@@ -60,6 +56,9 @@ header{
     height: 90vh; 
 }
 
+.hero{
+    font-size: 30px;
+}
 
 .hero button{
     border: 1px solid #8a2be2;
@@ -93,8 +92,37 @@ header{
 }
 /* SERVICES
 -------------------------------------------------- */
+.services h2{
+    margin-bottom: 20px;
+}
+.skills{
+    font-weight: 300;
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.skills div{
+    width: 30%;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.skills i{
+    margin-bottom: 10px;
+}
+
 /* RESPONSIVENESS
 --------------------------------------------------*/
+@media only screen and (max-width: 900px){
+    .skills{
+        flex-direction: column;
+    }
+    .skills div{
+        width: 100%;
+    }
+}
+
 @media only screen and (max-width: 600px){
     .hero{
         font-size: 20px;

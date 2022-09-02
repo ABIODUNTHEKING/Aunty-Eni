@@ -7,7 +7,7 @@
 
 body{ 
     color:; 
-    margin: 0 5%;
+    margin: 0 10%;
 }
 /* HEADER 
 ------------------------------------------ */
@@ -104,10 +104,13 @@ header{
 .skills div{
     width: 30%;
     padding: 20px;
-    border: 1px solid black;
+    border: 1px solid #8a2be2;
     border-radius: 10px;
 }
 
+.skills div h3{
+    margin-bottom: 10px;
+}
 .skills i{
     margin-bottom: 10px;
 }
@@ -124,6 +127,9 @@ header{
 }
 
 @media only screen and (max-width: 600px){
+    .intro{
+        margin: 2;
+    }
     .hero{
         font-size: 20px;
     }

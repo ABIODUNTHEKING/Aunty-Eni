@@ -88,20 +88,39 @@
         </div>
       </div>
       <div class="form" >
-        <form action="https://formsubmit.co/abayomiwuraola686@gmail.com"" method="POST"/>
-          <!-- Honeypot -->
-          <input type="text" name="_honey" style="display: none;" >
-          <!-- Disable Captcha -->
-          <input type="hidden" name="_captcha" value="false">
-          <!-- Sucess Message link -->
-          <input type="hidden" name="_next" value="success.html" >
-
-          <input type="text" placeholder="Full Name" name="Full Name">
-          <input type="text" placeholder="Email" name="Email">
-          <textarea name="Message" row="10" placeholder="Message" name="Email"></textarea>
+        <form class="contact_form" action="">
+          <input type="text" placeholder="Full Name" class="name">
+          <input type="email" placeholder="Email" class="email">
+          <textarea name="Message" row="10" placeholder="Message" class="message"></textarea>
           <button id="btn">Send To Me </button></a>
         </form>
       </div>
     </footer>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+    <script>
+       const form = document.querySelector('.contact_form'),
+      function sendMsg(e){
+        e.preventDefault();
+       
+        const name = document.querySelector('.name'),
+              email = document.querySelector('email'),
+              message = document.querySelector('.message');
+
+            //function Send Email
+            Email.send({
+                SecureToken : "37e7295f-9812-4e1b-80f9-db8ead9367a8",
+                To : 'emmanuel6ige@gmail.com',
+                From : "email.value",
+                Subject : "From Portfolio",
+                Body : "message.value"
+            }).then(
+              message => alert(message)
+            );
+      }
+
+      //add the event listener submit
+      form.addEventListener('submit', sendMsg);
+    </script>
   </body>
 </html>

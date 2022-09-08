@@ -49,8 +49,10 @@ header{
     padding: 10px;
     border-radius: 10px;
 }
-
 .contact:hover{
+    box-shadow: 2px 2px #8a2be2;
+}
+.contact:active{
     box-shadow: 2px 2px #8a2be2;
 }
 
@@ -143,25 +145,65 @@ header{
  /* FOOTER
 -------------------------------------------------- */
 footer{
-    height: 50vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    gap: 10px;
+}
+
+.details{
+    line-height: 30px;
+}
+
+.details span{
+    color: #8a2be2;
+}
+.details p{
+    color: rgb(206, 138, 138);
+}
+form input{
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: 0.5px solid #8a2be2;
+    width: 40%;
+    outline: 0;
+    display: inline-block;
+}
+
+textarea{
+    width: 80%;
+    height: 200px;
+    border: 1px solid #8a2be2;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: 300;
+    outline: 0;
+}
+
+footer button{
+    display: block;
+    border: 1px solid #8a2be2;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-weight: 400;
+    color: white;
+    background-color: #8a2be2;
+    margin-top: 10px;
+    cursor: pointer;
     
 }
 
-footer i{
+.info i{
     color: black;
     font-size: 30px;
-    margin-top: 30px;
+    margin-top: 10px;
     margin-right: 10px;
 }
-
-footer i:hover{
-    color: #8a2be2; 
+.info i:hover{
+    color: #8a2be2;
 }
-
 /* RESPONSIVENESS
 --------------------------------------------------*/
 @media only screen and (max-width: 900px){
@@ -170,6 +212,25 @@ footer i:hover{
     }
     .skills div{
         width: 100%;
+    }
+}
+
+@media only screen and (max-width: 858px){
+    footer{
+      flex-direction: column;
+      
+    }
+    footer input{
+        display: block;
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    textarea{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    footer button{
+        margin: 0 auto;
     }
 }
 
@@ -192,8 +253,9 @@ footer i:hover{
     }
 } 
 
+
 @media only screen and (max-width: 363px) {
     header{
         font-size: 10px;
     }
-}
+} 

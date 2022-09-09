@@ -92,7 +92,7 @@
           <input type="text" id="name" placeholder="Enter Name"> 
           <input type="email" id="email" placeholder="Enter Email"> 
           <textarea  id="message" placeholder="Enter Message" rows="3"></textarea>
-          <button type="submit" id="submit" onclick="sendEmail()"> Send Email </button>
+          <button type="submit" id="submit" onclick="sendEmail()"> Send To Me </button>
       </form>
       </div>
     </footer>
@@ -100,18 +100,19 @@
     </script>
     <script>  
       function sendEmail() {
-          let name = document.getElementById("name").value;
-          let email = document.getElementById("email").value;
-          let message = document.getElementById("message").value;
-          let finalmessage = `Name : ${name} <br>  Email : ${email} <br>  Message : ${message} <br>`;
           Email.send({
-              SecureToken : "7c22b817-10a5-48ba-b8ee-211c41a5835a",
+              // SecureToken : "7c22b817-10a5-48ba-b8ee-211c41a5835a",
+              Host : "stmp.gmail.com",
+              Username : "emmanuel6ige@gmail.com",
+              Password : "7A97053FF2A46C2FE40DE06CF37BB3626C51",
               To : 'emmanuel6ige@gmail.com',
               From : email,
               Subject : "Mail From Portfolio",
-              Body : finalmessage
+              Body : "Name: " + document.getElementById("name").value
+              + "<br> Email: " + document.getElementById("email").value
+              + "<br> Message: " + document.getElementById("message").value
           }).then(
-            message => alert(message)
+            message => alert("Message Sent Successfully")
           );
       }
       </script>

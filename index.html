@@ -88,33 +88,34 @@
         </div>
       </div>
       <div class="form" >
-        <form class="contact_form" action="">
-          <input type="text" placeholder="Full Name" id="name">
-          <input type="email" placeholder="Email" id="email">
-          <textarea name="Message" row="10" placeholder="Message" id="message"></textarea>
-          <button id="btn">Send To Me </button></a>
-        </form>
+        <form action="#" method="post">
+          <input type="text" id="name" placeholder="Enter Name"> 
+          <input type="email" id="email" placeholder="Enter Email"> 
+          <textarea  id="message" placeholder="Enter Message" rows="3"></textarea>
+          <button type="submit" id="submit" onclick="sendEmail()"> Send Email </button>
+      </form>
       </div>
     </footer>
     <script src="https://smtpjs.com/v3/smtp.js">
     </script>
-    <script>
-    function sendEmail() {
-    let name = document.getElementById("name").value;
-    let email = document.getElementById("email").value;
-    let message = document.getElementById("message").value;
-    let finalmessage = `Name : ${name} <br>  Email : ${email} <br>  Message : ${message} <br>`;
-    Email.send({
-        SecureToken : "2eba5df2-443b-43cb-908b-158d59c7385b",
-        To : 'emmanuel6ige@gmail.com',
-        From : email,
-        Subject : "From Portfolio",
-        Body : finalmessage
-    }).then(
-      message => alert(message)
-    );
-}
-    </script>
+    <script>  
+      function sendEmail() {
+          let name = document.getElementById("name").value;
+          let email = document.getElementById("email").value;
+          let message = document.getElementById("message").value;
+          let finalmessage = `Name : ${name} <br>  Email : ${email} <br>  Message : ${message} <br>`;
+          Email.send({
+              SecureToken : "7c22b817-10a5-48ba-b8ee-211c41a5835a",
+              To : 'emmanuel6ige@gmail.com',
+              From : email,
+              Subject : "Mail From Portfolio",
+              Body : finalmessage
+          }).then(
+            message => alert(message)
+          );
+      }
+      </script>
+      
   </body>
 </html>
 

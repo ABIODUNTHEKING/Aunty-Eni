@@ -161,18 +161,21 @@ footer{
 .details p{
     color: rgb(206, 138, 138);
 }
+form{
+    display: inline-block;
+}
 form input{
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 10px;
     border: 0.5px solid #8a2be2;
-    width: 100%;
+    width: 45%;
     outline: 0;
     display: inline-block;
 }
 
 textarea{
-    width: 100%;
+    width: 90%;
     height: 200px;
     border: 1px solid #8a2be2;
     border-radius: 5px;

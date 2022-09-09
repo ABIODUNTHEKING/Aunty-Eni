@@ -101,12 +101,9 @@
     <script>  
       function sendEmail() {
           Email.send({
-              // SecureToken : "7c22b817-10a5-48ba-b8ee-211c41a5835a",
-              Host : "stmp.gmail.com",
-              Username : "emmanuel6ige@gmail.com",
-              Password : "7A97053FF2A46C2FE40DE06CF37BB3626C51",
+              SecureToken : "70a0bfc5-acc3-46a4-bf24-725260c50676",
               To : 'emmanuel6ige@gmail.com',
-              From : email,
+              From : document.getElementById("email").value,
               Subject : "Mail From Portfolio",
               Body : "Name: " + document.getElementById("name").value
               + "<br> Email: " + document.getElementById("email").value

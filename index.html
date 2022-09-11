@@ -87,11 +87,11 @@
           <a href="mailto:abayomiwuraola686@gmail.com"><i class="fa-solid fa-envelope"></i></a>
         </div>
       </div>
-      <div class="form" method="post" action="#">
+      <div class="form" method="POST" data-netlify="true">
         <form>
-          <input type="text" id="name" placeholder="Enter Name"> 
-          <input type="email" id="email" placeholder="Enter Email"> 
-          <textarea  id="message" placeholder="Enter Message" rows="3"></textarea>
+          <input type="text" id="name" placeholder="Enter Name" name="name"> 
+          <input type="email" id="email" placeholder="Enter Email" name="email"> 
+          <textarea  id="message" placeholder="Enter Message" rows="3" name="message"></textarea>
           <button type="submit" id="submit" onclick="sendEmail()"> Send To Me </button>
       </form>
       </div>
